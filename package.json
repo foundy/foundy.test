@@ -1,0 +1,19 @@
+{
+  "name": "foundy.test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:foundy/foundy.test.git"
+  },
+  "keywords": [],
+  "author": "foundy <foundy@foundy.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@foundy/test-pack": "^0.1.0"
+  }
+}
