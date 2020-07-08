@@ -22,3 +22,22 @@ TypeError: normalizedName.indexOf is not a function
 
 ### NPM 게시 Plugins
 * 가이드와 같이 `commitlint-plugin-<plugin-name>` 포맷으로 NPM에 게시하여 사용하면 정상 동작이 된다.
+
+### Sourcetree 대응
+`~/.huskyrc` 파일에 추가 [reference - husky issue](https://github.com/typicode/husky/issues/390)
+```sh
+# 아래는 NVM 기준
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# 그 외 node path 기준으로 잡아준다
+export PATH="/usr/local/bin/:$PATH"
+
+# 예를들면..
+$ which node
+/usr/local/bin/node
+v13.8.0
+$ which yarn
+/usr/local/bin/yarn
+1.22.0
+```
