@@ -1,0 +1,5 @@
+name: Sync Branch Master to Develop
+on:
+  push:
+    branches:
+      - 'master'
