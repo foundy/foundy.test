@@ -18,8 +18,8 @@ jobs:
         node-version: 10
     - name: Opening pull request
       id: pull
-        uses: tretuna/sync-branches@1.2.0
-        with:
-          GITHUB_TOKEN: ${{ secrets.FOUNDY_TEST_TOKEN }}
-          FROM_BRANCH: 'master'
-          TO_BRANCH: 'develop'
+      uses: tretuna/sync-branches@1.2.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.FOUNDY_TEST_TOKEN }}
+        FROM_BRANCH: 'master'
+        TO_BRANCH: 'develop'
