@@ -11,10 +11,9 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      # with:
-      #   ref: 'develop'
+      with:
+        ref: 'develop'
+        token: ${{ github.FOUNDY_TEST_TOKEN }}
 
-    - name: Merge
-      run: |
-        git checkout develop
-        git merge --no-ff -m "Merge branch 'master' into develop" master
+    # - name: Merge
+    #   run: git merge --no-ff -m "Merge branch 'master' into develop" master
