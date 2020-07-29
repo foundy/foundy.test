@@ -3,20 +3,23 @@ name: Sync Branch Master to Develop
 on:
   push:
     branches:
-      - 'master'
+      - master
 
 jobs:
   sync-develop:
     runs-on: ubuntu-latest
+    name: Syncing develop
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-#       with:
-#         ref: 'develop'
-#         fetch-level: 0
-
-    - name: Merge
-      run: |
-        git checkout develop
-        git merge --no-ff -m "Merge branch 'master' into develop" master
-        git log -1
+    - name: Set up Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10
+    - name: Opening pull request
+      id: pull
+        uses: tretuna/sync-branches@1.2.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.FOUNDY_TEST_TOKEN }}
+          FROM_BRANCH: 'master'
+          TO_BRANCH: 'develop'
