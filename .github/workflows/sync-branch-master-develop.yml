@@ -11,11 +11,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        ref: 'develop'
-        fetch-level: 0
+#       with:
+#         ref: 'develop'
+#         fetch-level: 0
 
     - name: Merge
       run: |
+        git checkout develop
         git merge --no-ff -m "Merge branch 'master' into develop" master
         git log -1
