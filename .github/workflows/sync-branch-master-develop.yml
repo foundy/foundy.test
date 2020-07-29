@@ -14,9 +14,7 @@ jobs:
       with:
         ref: 'develop'
 
-    - name: Test Print
+    - name: Merge
       run: |
+        git merge --no-ff -m "Merge branch 'master' into develop" master
         git log -1
-
-    # - name: Merge
-    #   run: git merge --no-ff -m "Merge branch 'master' into develop" master
