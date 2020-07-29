@@ -37,6 +37,7 @@ export PATH="/usr/local/bin/:$PATH"
 $ which node
 /usr/local/bin/node
 v13.8.0
+
 $ which yarn
 /usr/local/bin/yarn
 1.22.0
