@@ -6,4 +6,4 @@ app2:
 
 configuration:
   - ./*
-  - '!**/*.md'
+  - all: ['!**/*.md']
