@@ -5,4 +5,4 @@ app2:
   - app2/**/*
 
 configuration:
-  - ['./*', '!*.md']
+  - ['*', '!*.md']
