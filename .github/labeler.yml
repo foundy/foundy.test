@@ -5,5 +5,4 @@ app2:
   - app2/**/*
 
 configuration:
-  - any: ['./*']
-  - all: ['!*.md']
+  - ./*
